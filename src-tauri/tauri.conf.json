@@ -1,18 +1,18 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "pnpm next-build",
-    "beforeDevCommand": "pnpm next-start",
+    "beforeBuildCommand": "yarn build && yarn export",
+    "beforeDevCommand": "yarn dev",
     "devPath": "http://localhost:3000",
     "distDir": "../out"
   },
   "package": {
-    "productName": "tauri-nextjs-template",
+    "productName": "transparency",
     "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": false
     },
     "bundle": {
       "active": true,
@@ -56,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
+        "height": 600,
         "resizable": true,
-        "title": "Tauri NextJS App",
-        "width": 1280,
-        "height": 800
+        "title": "transparency",
+        "width": 800
       }
     ]
   }
