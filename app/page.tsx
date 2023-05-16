@@ -1,4 +1,8 @@
-export default function Home() {
+'use client'
+import React from 'react';
+import './styles.css';
+
+function Home() {
   return (
     <>
       <div className={"container"}>
@@ -8,3 +12,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home;

@@ -35,3 +35,97 @@ h1, h2, h3, h4, h5, h6 {
     padding-top: 2.5%;
     padding-left: 5%;
 }
+
+.notification-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+}
+
+.notification {
+    position: relative;
+    padding-top: 5.5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-left: auto;
+    margin-right: 12px;
+
+    transform: translateX(0);
+
+    display: flex;
+    justify-content: left;
+    align-content: center;
+
+    height: 20px;
+    min-width: 180px;
+    width: fit-content;
+
+    background: #161616;
+
+    outline: 2px solid #000000;
+    outline-offset: -3px;
+
+    animation-duration: .25s;
+    animation-name: notification-intro;
+    animation-timing-function: cubic-bezier(.33, 1, .68, 1);
+
+    transition: all .1s;
+}
+
+@keyframes notification-intro {
+    from {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes notification-outro {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(80px);
+        opacity: 0;
+    }
+}
+
+.notification-info {
+    border: 1px double #5f00ff;
+}
+
+.notification-success {
+    border: 1px double #00c851;
+}
+
+.notification-warn {
+    border: 1px double #ffbb33;
+}
+
+.notification-error {
+    border: 1px double #ff4444;
+}
+
+.notification-text {
+    color: #f2f4f8;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    font-size: 8.6pt;
+
+    text-decoration: none;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
