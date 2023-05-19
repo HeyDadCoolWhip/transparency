@@ -1,0 +1,8 @@
+{
+  "versions": {
+    "dev": "DEV",
+    "alpha": "ALPHA",
+    "beta": "BETA",
+    "release": "Release"
+  }
+}
